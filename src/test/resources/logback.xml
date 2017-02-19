@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is not essential but helps to get you used to logback -->
+<!-- Put this file under src/main/resources folder -->
+
+<configuration scan="true">
+    <!-- Avoid logger spam from web socket -->
+    <logger name="org.eclipse.jetty" level="INFO"/>
+    <!-- Configure Discord4J logger level -->
+    <logger name="sx.blah.discord.Discord4J" level="DEBUG"/>
+    <!-- Avoid spam from cluster monitoring -->
+    <logger name="org.mongodb.driver" level="DEBUG"/>
+
+    <logger name="com.sedmelluq.discord.lavaplayer.player" level="DEBUG"/>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <root level="debug">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>
