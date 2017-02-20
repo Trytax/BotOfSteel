@@ -35,14 +35,7 @@ public class SkipCommand extends AbstractCommand {
     }
 
     private boolean canSkip() {
-        try {
-            if (message.getGuild().getID().equals("127824775090405377")) {
-                return BotManager.getInstance().getApplicationOwner().getID().equals(by.getID());
-            } else {
-                return true;
-            }
-        } catch (DiscordException e) {
-            return false;
-        }
+        return !message.getGuild().getID().equals("127824775090405377") ||
+            BotManager.getInstance().getApplicationOwner().getID().equals(by.getID());
     }
 }
