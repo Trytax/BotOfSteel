@@ -1,11 +1,10 @@
 package com.omega.command.impl;
 
-import com.omega.StringUtils;
+import com.omega.util.StringUtils;
 import sx.blah.discord.handle.obj.IChannel;
 import sx.blah.discord.handle.obj.IGuild;
 import sx.blah.discord.handle.obj.IRole;
 import sx.blah.discord.handle.obj.IUser;
-import sx.blah.discord.util.MessageTokenizer;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
